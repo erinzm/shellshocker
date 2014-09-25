@@ -54,8 +54,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   provisioning_script = %Q{
-    sudo apt-get update
-    sudo apt-get install python2.7 python-pip python-virtualenv
+    sudo apt-get update -y
+    sudo apt-get install -y python2.7 python-pip python-virtualenv
   }
 
   config.vm.provision "shell", inline: provisioning_script
