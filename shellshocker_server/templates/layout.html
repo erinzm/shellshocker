@@ -9,9 +9,16 @@
     <meta name="author" content="">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/i.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mnml.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
   </head>
   <body>
+    {% block body %}
     <h1 style="text-align: center; padding-top:2em;">superfragilisticexpialidocious</h1>
+    {% endblock %}
+
+    {% block scripts %}
+    <script src="{{ url_for('static', filename='js/buttons.js') }}"></script>
+    {% endblock %}
   </body>
 </html>
