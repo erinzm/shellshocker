@@ -40,5 +40,7 @@ In your Vagrant enviroment, everything'll be set up. If it somehow isn't...
 
 If you're not in the virtualenv, activate it: `. env/bin/activate`.
 
+**SEND ME PRs!** *Please!* I can't add every feature people want ;)
+
 ### Authors
 * Liam (ArchimedesPi)
