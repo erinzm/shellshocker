@@ -1,0 +1,21 @@
+{% extends "style.html" %}
+{% block content %}
+<div class="row">
+  <div class="col-md-6">
+    <h2>Testing {{websiteUrl}}{% if commonVulnerableRoutes %} with common vulnerable routes{% endif %}...</h2>
+  </div>
+  <div class="col-md-6">
+    <div class="loader testing-spinner">Testing...</div>
+  </div>
+</div>
+<hr>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script>
+urlsToCheck = {{ urlsToCheck | tojson }};
+headersToCheck = ['User-Agent'];
+</script>
+<script src="{{ url_for('static', filename='js/shocker.js') }}"></script>
+{% endblock %}

@@ -15,11 +15,12 @@ def shockit():
   elif request.form.get('commonVulnerableRoutes') == "on":
     commonVulnerableRoutes = True
   if commonVulnerableRoutes == True:
-    urlsToCheck.extend(ShellShocker.commonVulnerableRoutes)
+    for r in ShellShocker.commonVulnerableRoutes:
+      urlsToCheck.append(websiteUrl + r)
   return render_template('shockit.html',
     websiteUrl = websiteUrl,
     commonVulnerableRoutes = commonVulnerableRoutes,
-    urlsToCheck = str(urlsToCheck)
+    urlsToCheck = urlsToCheck
     )
 
 @app.route('/exploitable', methods=['POST'])
