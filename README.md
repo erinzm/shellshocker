@@ -19,6 +19,15 @@ ShellShocker has two different ways of being run:
 * a web interface **which will be publicly deployed to Heroku *today***
 
 #### Usage of the CLI:
+<pre>
+Usage: shellshocker.py [OPTIONS] URL
+
+  Command to test the site
+
+Options:
+  --verbose
+  --help     Show this message and exit.
+</pre>
 
 ### Hacking on the code
 **`vagrant up`**.
