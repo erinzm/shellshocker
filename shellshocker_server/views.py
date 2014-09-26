@@ -24,7 +24,6 @@ def shockit():
 
 @app.route('/exploitable', methods=['POST'])
 def exploitable():
-  print 'called route'
   websiteUrl = request.form.get('websiteUrl')
   shocker = ShellShocker({'url': websiteUrl})
   exploitable = shocker.exploitable()
