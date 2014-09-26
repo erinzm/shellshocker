@@ -14,8 +14,18 @@ what's vulnerable)
 It can act as a testing toolkit for ShellShock for researchers as well!
 
 ### How do I use it?
-We'll have a Heroku deployment soon.
-***Documentation coming soon***
+ShellShocker has two different ways of being run:
+* a command line utility, and
+* a web interface **which will be publicly deployed to Heroku *today***
+
+#### Usage of the CLI:
+
+### Hacking on the code
+**`vagrant up`**.
+In your Vagrant enviroment, everything'll be set up. If it somehow isn't...
+**`vagrant provision`**.
+
+If you're not in the virtualenv, activate it: `. env/bin/activate`.
 
 ### Authors
 * Liam (ArchimedesPi)
