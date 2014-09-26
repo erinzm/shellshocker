@@ -1,0 +1,23 @@
+body {
+  padding-top: 50px;
+}
+.shellshocker-body {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.button:hover, .button:focus {
+  text-decoration: none;
+}
+
+.mashing-button {
+  margin-top: 5px;
+}
+
+.orangey {
+  color: #f18d05 !important;
+}
+
+.orangey:hover {
+  color: #c17104 !important;
+}

@@ -1,7 +1,16 @@
-{% extends "layout.html" %}
-{% block body %}
-  <p>
-    Hi there
-  </p>
-  <a href="#" class="button button-rounded button-flat-royal">press me</a>
+{% extends "style.html" %}
+{% block content %}
+<h2>Shock that shell</h2>
+<hr>
+<form role="form" action="{{url_for('shockit')}}" method="post">
+  <div class="form-group">
+    <label for="websiteUrl">URL to shock</label>
+    <input type="text" class="form-control" id="websiteUrl" placeholder="Website URL" name="websiteUrl">
+  </div>
+  <div class="form-group">
+    <input type="checkbox" name="commonVulnerableRoutes"> Try some common vulnerable routes
+  </div>
+  <!-- <a href="" class="button mashing-button shock-it button-border-royal button-circle">Shock it!</a> -->
+  <button type="submit" class="btn btn-lg">Shock it!</button>
+</form>
 {% endblock %}
