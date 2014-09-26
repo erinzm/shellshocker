@@ -2,7 +2,7 @@ $(document).ready(function() {
   _.each(urlsToCheck, function (url) {
     _.each(headersToCheck, function (header) {
       console.log('Checking URL ' + url + ' with header ' + header)
-      $.post('/exploitable', {
+      $.post(exploitableCheckURL, {
         websiteUrl: url,
         header: header
       }).done(function (response) {

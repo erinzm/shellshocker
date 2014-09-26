@@ -15,6 +15,15 @@
     </div> <!-- /.navbar-collapse !-->
   </div>
 </div>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-danger" role="alert">...</div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
 <div class="container">
   <div class="shellshocker-body">
     {% block content %}

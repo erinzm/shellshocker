@@ -9,12 +9,18 @@
   </div>
 </div>
 <hr>
+
+<!-- This is the well that we put the results in !-->
+<div class="well well-lg">
+</div>
+
 {% endblock %}
 
 {% block scripts %}
 {{ super() }}
 <script>
 urlsToCheck = {{ urlsToCheck | tojson }};
+exploitableCheckURL = {{ url_for('index') }};
 headersToCheck = ['User-Agent'];
 </script>
 <script src="{{ url_for('static', filename='js/shocker.js') }}"></script>

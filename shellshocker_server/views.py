@@ -1,6 +1,7 @@
 from flask import render_template, flash, jsonify, redirect, session, url_for, request, g
 from shellshocker_server import app
 from shellshocker.exploits import ShellShocker
+from shellshocker.url import verify_url
 
 @app.route('/', methods=['GET'])
 def index():
@@ -9,6 +10,9 @@ def index():
 @app.route('/shockit/', methods=['GET', 'POST'])
 def shockit():
   websiteUrl = request.form.get('websiteUrl')
+  if not verify_url(websiteUrl):
+    flash('Bad URL')
+    return redirect(url_for('index'))
   urlsToCheck = [websiteUrl]
   if request.form.get('commonVulnerableRoutes') is None:
     commonVulnerableRoutes = False
