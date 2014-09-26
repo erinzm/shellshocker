@@ -34,9 +34,9 @@ Options:
 </pre>
 
 ### Hacking on the code
-**`vagrant up`**.
+`vagrant up`.
 In your Vagrant enviroment, everything'll be set up. If it somehow isn't...
-**`vagrant provision`**.
+`vagrant provision`.
 
 If you're not in the virtualenv, activate it: `. env/bin/activate`.
 
