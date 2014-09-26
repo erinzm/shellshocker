@@ -1,7 +1,7 @@
-![ShellShock logo](./shellshock-logo.png)
-
 ShellShocker
 ============
+
+<img src="https://github.com/ArchimedesPi/shellshocker/raw/master/shellshock-logo.png" alt="ShellShocker" align="right" />
 
 If you don't know what the ShellShock Bash exploit is, you should probably Google it.
 Now that you know...
