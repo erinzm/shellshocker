@@ -26,8 +26,6 @@ def test_site(url, verbose):
 
   if verbose:
     click.echo("Sending exploit to {url}".format(url=url))
-  # Send the exploit to the server
-  shocker.bazinga()
 
   # Is it exploitable?
   exploitable = shocker.exploitable()
