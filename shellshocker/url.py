@@ -1,3 +1,5 @@
+import re
+
 def verify_url(url):
   url_verify_regex = re.compile(
         r'^(?:http|ftp)s?://' # http:// or https://
