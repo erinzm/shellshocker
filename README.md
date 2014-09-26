@@ -22,11 +22,15 @@ ShellShocker has two different ways of being run:
 <pre>
 Usage: shellshocker.py [OPTIONS] URL
 
-  Command to test the site
+  Test the URL `URL` for ShellShock vulnerability.
 
 Options:
-  --verbose
-  --help     Show this message and exit.
+  -v, --verbose                   Make the tester more verbose for debugging
+  -c, --command TEXT              Command to inject into the payload
+  -p, --payload [traditional|new]
+                                  Choose between the original bug and the new
+                                  one
+  --help                          Show this message and exit.
 </pre>
 
 ### Hacking on the code

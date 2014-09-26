@@ -13,11 +13,12 @@ import click # Click is Armin Ronacher's new CLI framework. It's awesomesauce.
 
 @click.command()
 @click.argument('url')
-@click.option('--verbose', is_flag=True)
-# I'll add payload, etc here later.
+@click.option('-v', '--verbose', is_flag=True, help='Make the tester more verbose for debugging')
+@click.option('-c', '--command', help='Command to inject into the payload')
+@click.option('-p', '--payload', type=click.Choice(['traditional', 'new']), help='Choose between the original bug and the new one')
 def test_site(url, verbose):
   """
-  Command to test the site
+  Test the URL `URL` for ShellShock vulnerability.
   """
   click.echo("Testing {url} with a standard payload using ShellShocker".format(url=url))
 
