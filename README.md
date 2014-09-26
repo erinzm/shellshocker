@@ -1,7 +1,7 @@
 ShellShocker
 ============
 
-<img src="https://github.com/ArchimedesPi/shellshocker/raw/master/shellshocker_server/assets/images/shellshock-logo.png" alt="ShellShocker" align="right" />
+<img src="https://raw.githubusercontent.com/ArchimedesPi/shellshocker/master/shellshocker_server/static/images/shellshock-logo.png" alt="ShellShocker" align="right" />
 
 If you don't know what the ShellShock Bash exploit is, you should probably Google it.
 Now that you know...
