@@ -42,6 +42,7 @@ def shockit():
 def exploitable():
   websiteUrl = request.form.get('websiteUrl')
   header = request.form.get('header')
+  # print websiteUrl + ' :: ' + header
   shocker = ShellShocker({'url': websiteUrl, 'payload_headers': [header]})
   exploitable = shocker.exploitable()
   return jsonify(exploitable=exploitable)
