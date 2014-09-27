@@ -10,7 +10,6 @@ def index():
 @app.route('/shockit/', methods=['GET', 'POST'])
 def shockit():
   websiteUrl = request.form.get('websiteUrl', type=str)
-  print websiteUrl
   if verify_url(websiteUrl):
     urlsToCheck = [websiteUrl]
     if request.form.get('commonVulnerableRoutes') is None:
