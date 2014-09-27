@@ -11,14 +11,14 @@ Now that you know...
 ### What is this for?
 ShellShocker tests a website for vulnerability to the ShellShock bug.
 There's a command-line tool for doing testing, and a deployable Flask-powered
-ShellShock testing website (punch in the URL of your server, we'll tell you
+[ShellShock testing website](http://shellshocker.herokuapp.com) (punch in the URL of your server, we'll tell you
 what's vulnerable)
 It can act as a testing toolkit for ShellShock for researchers as well!
 
 ### How do I use it?
 ShellShocker has two different ways of being run:
 * a command line utility, and
-* a web interface **which will be publicly deployed to Heroku *today***
+* a web interface, which is [deployed to Heroku](http://shellshocker.herokuapp.com)
 
 #### Usage of the CLI:
 <pre>
