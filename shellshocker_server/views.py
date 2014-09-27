@@ -1,5 +1,5 @@
 from flask import render_template, flash, jsonify, redirect, Response,session, url_for, request, g
-from shellshocker_server import app
+from shellshocker_server import app, sentry
 from shellshocker.exploits import ShellShocker
 from shellshocker.url import verify_url
 from raven.contrib.flask import Sentry
@@ -20,6 +20,10 @@ def shockit():
     if commonVulnerableRoutes == True:
       for r in ShellShocker.commonVulnerableRoutes:
         urlsToCheck.append(websiteUrl + r)
+
+    if app.config['USE_SENTRY']:
+      sentry.captureMessage('{ip} requested exploit of {url}'.format(ip))
+
     return render_template('shockit.html',
       websiteUrl = websiteUrl,
       commonVulnerableRoutes = commonVulnerableRoutes,
