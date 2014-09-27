@@ -1,5 +1,6 @@
 ShellShocker
 ============
+![Time to close issues](http://issuestats.com/github/ArchimedesPi/shellshocker/badge/issue?style=flat) ![Time to merge PRs](http://issuestats.com/github/ArchimedesPi/shellshocker/badge/pr?style=flat)
 
 <img src="https://raw.githubusercontent.com/ArchimedesPi/shellshocker/master/shellshocker_server/static/images/shellshock-logo.png" alt="ShellShocker" align="right" />
 
