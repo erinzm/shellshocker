@@ -22,12 +22,12 @@ def shockit():
       for r in ShellShocker.commonVulnerableRoutes:
         urlsToCheck.append(websiteUrl + r)
 
-    if app.config['USE_SENTRY']:
-      sentry.captureMessage('IP {ip} requested exploit of {url} with commonVulnerableRoutes: {cvr}'.format(ip='removed',
-        url=websiteUrl,
-        cvr=commonVulnerableRoutes),
-        level=logging.INFO
-        )
+    #if app.config['USE_SENTRY']:
+    #  sentry.captureMessage('IP {ip} requested exploit of {url} with commonVulnerableRoutes: {cvr}'.format(ip='removed',
+    #    url=websiteUrl,
+    #    cvr=commonVulnerableRoutes),
+    #    level=logging.INFO
+    #    )
 
     return render_template('shockit.html',
       websiteUrl = websiteUrl,
