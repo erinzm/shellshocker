@@ -28,5 +28,5 @@ $(document).ready(function() {
     }
   }
 
-  $('.testing-spinner').remove()
+  $('.testing-spinner').hide();
 });
