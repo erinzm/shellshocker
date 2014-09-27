@@ -3,6 +3,7 @@ from shellshocker_server import app, sentry
 from shellshocker.exploits import ShellShocker
 from shellshocker.url import verify_url
 from raven.contrib.flask import Sentry
+from raven.event import Message
 
 @app.route('/', methods=['GET'])
 def index():
@@ -22,7 +23,7 @@ def shockit():
         urlsToCheck.append(websiteUrl + r)
 
     if app.config['USE_SENTRY']:
-      sentry.captureMessage('{ip} requested exploit of {url} with commonVulnerableRoutes: {cvr}'.format(ip=request.remote_addr, url=websiteUrl, cvr=commonVulnerableRoutes))
+      sentry.captureMessage('{ip} requested exploit of {url} with commonVulnerableRoutes: {cvr}'.format(ip=request.remote_addr, url=websiteUrl, cvr=commonVulnerableRoutes), event_type = Message)
 
     return render_template('shockit.html',
       websiteUrl = websiteUrl,
