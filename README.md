@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/ArchimedesPi/shellshocker.png?label=ready&title=Ready)](https://waffle.io/ArchimedesPi/shellshocker)
 ShellShocker
 ============
 ![Time to close issues](http://issuestats.com/github/ArchimedesPi/shellshocker/badge/issue?style=flat) ![Time to merge PRs](http://issuestats.com/github/ArchimedesPi/shellshocker/badge/pr?style=flat)
