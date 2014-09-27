@@ -3,7 +3,9 @@ $(document).ready(function() {
   alertTemplate = Handlebars.compile(alertTemplateText);
 
   for (var i = 0; i < urlsToCheck.length; i++){
+    url = urlsToCheck[i]
     for (var j = 0; j < headersToCheck.length; j++) {
+      header = headersToCheck[j]
       console.log('Checking URL ' + url + ' with header ' + header)
       $.post(exploitableCheckURL, {
         websiteUrl: url,
