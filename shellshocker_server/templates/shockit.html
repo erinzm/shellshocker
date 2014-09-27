@@ -11,17 +11,35 @@
 <hr>
 
 <!-- This is the well that we put the results in !-->
-<div class="well well-lg">
+<div class="well well-lg results-well">
 </div>
 
 {% endblock %}
 
 {% block scripts %}
 {{ super() }}
+<!-- Here's a Handlebars template !-->
+<script id="alertTemplateText" type="text/x-handlebars-template">
+{% raw %}
+{{#if exploitable}}
+<div class="alert alert-danger" role="alert">
+  <strong>Oh snap!</strong> {{url}} is <strong>exploitable</strong> with header {{header}}
+</div>
+{{else}}
+  <div class="alert alert-success" role="alert">
+    <strong>Awesomesauce!</strong> {{url}} is <strong>not</strong> exploitable with header {{header}}
+  </div>
+{{/if}}
+{% endraw %}
+</script>
+
+<!-- Block so Jinja2 can pass stuff into JavaScript !-->
 <script>
 urlsToCheck = {{ urlsToCheck | tojson }};
-exploitableCheckURL = {{ url_for('index') }};
+exploitableCheckURL = "{{ url_for('exploitable') }}";
 headersToCheck = ['User-Agent'];
 </script>
+
+<!-- The script that makes the tests run !-->
 <script src="{{ url_for('static', filename='js/shocker.js') }}"></script>
 {% endblock %}

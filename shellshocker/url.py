@@ -1,7 +1,7 @@
 import re
 
 def verify_url(url):
-  url_verify_regex = re.compile(
+  regex = re.compile(
         r'^(?:http|ftp)s?://' # http:// or https://
         r'(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+(?:[A-Z]{2,6}\.?|[A-Z0-9-]{2,}\.?)|' #domain...
         r'localhost|' #localhost...
@@ -9,8 +9,7 @@ def verify_url(url):
         r'(?::\d+)?' # optional port
         r'(?:/?|[/?]\S+)$', re.IGNORECASE)
 
-  url_match = url_verify_regex.match(url)
-  if url_match:
+  if regex.match(url):
     return True
   else:
     return False
