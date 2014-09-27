@@ -22,7 +22,7 @@ def shockit():
         urlsToCheck.append(websiteUrl + r)
 
     if app.config['USE_SENTRY']:
-      sentry.captureMessage('{ip} requested exploit of {url}'.format(ip))
+      sentry.captureMessage('{ip} requested exploit of {url} with commonVulnerableRoutes: {cvr}'.format(ip=request.remote_addr, url=websiteUrl, cvr=commonVulnerableRoutes))
 
     return render_template('shockit.html',
       websiteUrl = websiteUrl,
