@@ -1,5 +1,6 @@
 ShellShocker
 ============
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/ArchimedesPi/shellshocker?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Stories in Ready](https://badge.waffle.io/ArchimedesPi/shellshocker.png?label=ready&title=Ready)](https://waffle.io/ArchimedesPi/shellshocker)
 ![Time to close issues](http://issuestats.com/github/ArchimedesPi/shellshocker/badge/issue?style=flat) ![Time to merge PRs](http://issuestats.com/github/ArchimedesPi/shellshocker/badge/pr?style=flat)
 
