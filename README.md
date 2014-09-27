@@ -1,6 +1,6 @@
-[![Stories in Ready](https://badge.waffle.io/ArchimedesPi/shellshocker.png?label=ready&title=Ready)](https://waffle.io/ArchimedesPi/shellshocker)
 ShellShocker
 ============
+[![Stories in Ready](https://badge.waffle.io/ArchimedesPi/shellshocker.png?label=ready&title=Ready)](https://waffle.io/ArchimedesPi/shellshocker)
 ![Time to close issues](http://issuestats.com/github/ArchimedesPi/shellshocker/badge/issue?style=flat) ![Time to merge PRs](http://issuestats.com/github/ArchimedesPi/shellshocker/badge/pr?style=flat)
 
 <img src="https://raw.githubusercontent.com/ArchimedesPi/shellshocker/master/shellshocker_server/static/images/shellshock-logo.png" alt="ShellShocker" align="right" />
