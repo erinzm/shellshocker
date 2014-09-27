@@ -33,7 +33,7 @@ def shockit():
       websiteUrl = websiteUrl,
       commonVulnerableRoutes = commonVulnerableRoutes,
       urlsToCheck = urlsToCheck,
-      headersToCheck = ShellShocker.commonVulnerableHeaders
+      headersToCheck = ShellShocker.commonVulnerableHeaders,
       )
   flash('Baaaad URL. Check it and fix it :\'(')
   return redirect(url_for('index'))

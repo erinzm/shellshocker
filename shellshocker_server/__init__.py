@@ -1,6 +1,7 @@
 from flask import Flask
 #from shellshocker_server.saferproxyfix import SaferProxyFix
 from raven.contrib.flask import Sentry
+from flask.ext.analytics import Analytics
 
 import os
 
@@ -14,6 +15,12 @@ try:
 except KeyError:
   app.config['USE_SENTRY'] = False
 
+try:
+  app.config['GOOGLE_ANALYTICS_ID'] = os.environ['GOOGLE_ANALYTICS_ID']
+except KeyError:
+  pass
+
 sentry = Sentry(app)
+analytics = Analytics(app)
 
 import shellshocker_server.views
