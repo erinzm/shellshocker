@@ -2,6 +2,7 @@ from flask import render_template, flash, jsonify, redirect, Response,session, u
 from shellshocker_server import app
 from shellshocker.exploits import ShellShocker
 from shellshocker.url import verify_url
+from raven.contrib.flask import Sentry
 
 @app.route('/', methods=['GET'])
 def index():

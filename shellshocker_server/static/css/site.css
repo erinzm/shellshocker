@@ -1,6 +1,7 @@
 body {
   padding-top: 50px;
 }
+
 .shellshocker-body {
   padding: 40px 15px;
   text-align: center;
@@ -84,4 +85,18 @@ body {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+
+/*
+* Footer
+*/
+.site-footer {
+  padding: 40px 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
+.site-footer p:last-child {
+  margin-bottom: 0;
 }
