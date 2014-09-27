@@ -1,4 +1,5 @@
 from flask import Flask
+#from shellshocker_server.saferproxyfix import SaferProxyFix
 from raven.contrib.flask import Sentry
 
 import os
