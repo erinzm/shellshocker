@@ -14,7 +14,6 @@ try:
 except KeyError:
   app.config['USE_SENTRY'] = False
 
-if app.config['USE_SENTRY']:
-  sentry = Sentry(app)
+sentry = Sentry(app)
 
 import shellshocker_server.views
