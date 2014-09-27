@@ -2,8 +2,8 @@ $(document).ready(function() {
   alertTemplateText = $('#alertTemplateText').html();
   alertTemplate = Handlebars.compile(alertTemplateText);
 
-  _.each(urlsToCheck, function (url) {
-    _.each(headersToCheck, function (header) {
+  for (var i = 0; i < urlsToCheck.length; i++){
+    for (var j = 0; j < headersToCheck.length; j++) {
       console.log('Checking URL ' + url + ' with header ' + header)
       $.post(exploitableCheckURL, {
         websiteUrl: url,
@@ -14,10 +14,10 @@ $(document).ready(function() {
         template_html = alertTemplate({exploitable: exploitable, url: url, header: header});
         $('.results-well').append(template_html).fadeIn();
         console.log(template_html);
+        $('.testing-spinner').remove()
       }).fail(function () {
         console.log("Server request failed");
       });
-    });
-  });
-  $('.testing-spinner').remove()
+    }
+  }
 });
