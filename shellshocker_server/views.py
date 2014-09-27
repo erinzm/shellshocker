@@ -23,7 +23,8 @@ def shockit():
     return render_template('shockit.html',
       websiteUrl = websiteUrl,
       commonVulnerableRoutes = commonVulnerableRoutes,
-      urlsToCheck = urlsToCheck
+      urlsToCheck = urlsToCheck,
+      headersToCheck = ShellShocker.commonVulnerableHeaders
       )
   flash('Baaaad URL. Check it and fix it :\'(')
   return redirect(url_for('index'))
@@ -31,6 +32,7 @@ def shockit():
 @app.route('/exploitable', methods=['POST'])
 def exploitable():
   websiteUrl = request.form.get('websiteUrl')
-  shocker = ShellShocker({'url': websiteUrl})
+  header = request.form.get('header')
+  shocker = ShellShocker({'url': websiteUrl, 'payload_headers': [header]})
   exploitable = shocker.exploitable()
   return jsonify(exploitable=exploitable)
