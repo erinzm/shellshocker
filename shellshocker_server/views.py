@@ -29,9 +29,9 @@ def shockit():
     #    level=logging.INFO
     #    )
 
-    print 'IP {ip} requested exploit of {url} with commonVulnerableRoutes: {cvr}'.format(ip='removed',
+    app.logger.info('IP {ip} requested exploit of {url} with commonVulnerableRoutes: {cvr}'.format(ip='removed',
         url=websiteUrl,
-        cvr=commonVulnerableRoutes)
+        cvr=commonVulnerableRoutes))
 
     return render_template('shockit.html',
       websiteUrl = websiteUrl,
