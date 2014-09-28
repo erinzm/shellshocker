@@ -1,9 +1,12 @@
+from __future__ import print_function
+import sys
 from flask import render_template, flash, jsonify, redirect, Response,session, url_for, request, g
 from shellshocker_server import app, sentry
 from shellshocker.exploits import ShellShocker
 from shellshocker.url import verify_url
 from raven.contrib.flask import Sentry
 import logging
+
 
 @app.route('/', methods=['GET'])
 def index():
@@ -31,7 +34,8 @@ def shockit():
 
     print('IP {ip} requested exploit of {url} with commonVulnerableRoutes: {cvr}'.format(ip='removed',
         url=websiteUrl,
-        cvr=commonVulnerableRoutes))
+        cvr=commonVulnerableRoutes),
+        file=sys.stderr)
 
     return render_template('shockit.html',
       websiteUrl = websiteUrl,
