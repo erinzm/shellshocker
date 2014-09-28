@@ -1,5 +1,5 @@
 from flask import Flask
-#from shellshocker_server.saferproxyfix import SaferProxyFix
+from shellshocker_server.saferproxyfix import SaferProxyFix
 from raven.contrib.flask import Sentry
 
 import os
@@ -16,5 +16,7 @@ except KeyError:
 
 
 sentry = Sentry(app)
+
+app.wsgi_app = SaferProxyFix(app.wsgi_app)
 
 import shellshocker_server.views
