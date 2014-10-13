@@ -19,7 +19,7 @@ It can act as a testing toolkit for ShellShock for researchers as well!
 ### How do I use it?
 ShellShocker has two different ways of being run:
 * a command line utility, and
-* a web interface, which is deployed to Heroku
+* a web interface, which ~~is~~ was deployed to Heroku
 
 #### Usage of the CLI:
 <pre>
