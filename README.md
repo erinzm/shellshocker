@@ -13,8 +13,8 @@ Now that you know...
 ShellShocker tests a website for vulnerability to the ShellShock bug.
 There's a command-line tool for doing testing, and a deployable Flask-powered
 ShellShock testing website (punch in the URL of your server, we'll tell you
-what's vulnerable)
-It can act as a testing toolkit for ShellShock for researchers as well!
+what's vulnerable).
+It's also useful as a Shellshock exploit POC testing framework for researchers. 
 
 ### How do I use it?
 ShellShocker has two different ways of being run:
